@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1020">
+  <title>Macro Tracker</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1 id="title">Today</h1>
+  </header>
+
+  <main id="main"></main>
+
+  <nav class="tabbar">
+    <button data-action="nav" data-view="today" class="tab"><span class="ti">◎</span>Today</button>
+    <button data-action="nav" data-view="trends" class="tab"><span class="ti">▥</span>Trends</button>
+    <button data-action="nav" data-view="weight" class="tab"><span class="ti">⚖</span>Weight</button>
+    <button data-action="nav" data-view="settings" class="tab"><span class="ti">⚙</span>Settings</button>
+  </nav>
+
+  <div id="backdrop" class="backdrop" hidden></div>
+  <section id="sheet" class="sheet" hidden></section>
+  <div id="toast" class="toast" hidden></div>
+
+  <!-- Hidden file pickers: camera for label photos, gallery fallback, backup import -->
+  <input id="photoCamera" type="file" accept="image/*" capture="environment" hidden>
+  <input id="photoGallery" type="file" accept="image/*" hidden>
+  <input id="importFile" type="file" accept="application/json,.json" hidden>
+
+  <script src="app.js"></script>
+</body>
+</html>
